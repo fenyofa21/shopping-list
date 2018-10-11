@@ -32,7 +32,7 @@ public class Item {
 
     @Column
     @NotNull
-    private String name;
+    private String item_name;
 
     @Column
     @NotNull
@@ -55,7 +55,7 @@ public class Item {
     private LocalDateTime updated_at;
     
     @OneToMany(mappedBy = "item")
-    private List<Message> messages;
+    private List<Message> message;
     
     @ManyToOne
     @JoinColumn

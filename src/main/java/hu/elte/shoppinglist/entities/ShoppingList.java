@@ -32,7 +32,7 @@ public class ShoppingList {
     
     @Column
     @NotNull
-    private Integer owner_id;
+    private String owner;
 
     @Column(updatable = false)
     @CreationTimestamp
