@@ -22,7 +22,7 @@ public class ItemController {
 
     @Autowired
     private ItemRepository itemRepository;
-    
+
     @Autowired
     private MessageRepository messageRepository;
 
@@ -58,7 +58,7 @@ public class ItemController {
             return ResponseEntity.notFound().build();
         }
     }
-    
+
     @GetMapping("/{id}/message")
     public ResponseEntity<Iterable<Message>> message
             (@PathVariable Integer id) {
@@ -69,7 +69,7 @@ public class ItemController {
             return ResponseEntity.notFound().build();
         }
     }
-            
+
     @PostMapping("/{id}/message")
     public ResponseEntity<Message> insertMessage
             (@PathVariable Integer id,

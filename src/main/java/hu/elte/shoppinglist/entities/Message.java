@@ -1,15 +1,11 @@
 package hu.elte.shoppinglist.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.time.LocalDateTime;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -22,6 +18,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
+@Table(name = "messages")
 public class Message {
 
     @Id
@@ -35,12 +32,12 @@ public class Message {
 
     @Column(updatable = false)
     @CreationTimestamp
-    private LocalDateTime created_at;
+    private LocalDateTime createdAt;
 
     @Column
     @UpdateTimestamp
-    private LocalDateTime updated_at;
-    
+    private LocalDateTime updatedAt;
+
     @ManyToOne
     @JoinColumn
     @JsonIgnore

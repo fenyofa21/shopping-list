@@ -2,12 +2,7 @@ package hu.elte.shoppinglist.entities;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,7 +16,9 @@ import org.hibernate.annotations.UpdateTimestamp;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
+@Table(name = "shoppinglists")
 public class ShoppingList {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -29,10 +26,10 @@ public class ShoppingList {
     @Column
     @NotNull
     private String title;
-    
-    @Column
-    @NotNull
-    private String owner;
+
+    @ManyToOne
+    @JoinColumn
+    private User owner;
 
     @Column(updatable = false)
     @CreationTimestamp
@@ -41,7 +38,7 @@ public class ShoppingList {
     @Column
     @UpdateTimestamp
     private LocalDateTime updated_at;
-    
+
     @OneToMany(mappedBy = "shoppinglist")
     private List<Item> item;
 }
