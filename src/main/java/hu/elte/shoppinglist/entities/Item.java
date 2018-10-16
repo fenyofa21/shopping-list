@@ -12,6 +12,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -52,7 +53,8 @@ public class Item {
     private LocalDateTime updatedAt;
 
     @OneToMany(mappedBy = "item")
-    private List<Message> message;
+    @Cascade(org.hibernate.annotations.CascadeType.ALL)
+    private List<Message> messages;
 
     @ManyToOne
     @JsonIgnore

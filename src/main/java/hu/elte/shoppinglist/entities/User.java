@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.Cascade;
+import org.springframework.beans.factory.annotation.Value;
 
 import javax.persistence.*;
 import java.util.List;
@@ -28,15 +30,22 @@ public class User {
     private String password;
 
     @Column(nullable = false)
-    @Enumerated(EnumType.STRING)
-    private Role role;
+    private String role;
 
-    public enum Role {
-        ROLE_GUEST, ROLE_USER, ROLE_ADMIN
-    }
+//    public enum Role {
+//        ROLE_GUEST, USER, ROLE_ADMIN
+//    }
 
     @OneToMany(mappedBy = "owner")
     @JsonIgnore
-    private List<ShoppingList> shoppingList;
+    @Cascade(org.hibernate.annotations.CascadeType.ALL)
+    private List<ShoppingList> shoppingLists;
 
+    @ManyToMany
+    @JsonIgnore
+    @Cascade(org.hibernate.annotations.CascadeType.ALL)
+    @JoinTable(name = "USER_CONTRIBUTIONS",
+            joinColumns = @JoinColumn(name = "list_id"),
+            inverseJoinColumns = @JoinColumn(name = "user_id"))
+    private List<ShoppingList> contributions;
 }

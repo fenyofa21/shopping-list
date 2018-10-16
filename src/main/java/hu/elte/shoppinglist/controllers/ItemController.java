@@ -64,7 +64,7 @@ public class ItemController {
             (@PathVariable Integer id) {
         Optional<Item> item = itemRepository.findById(id);
         if (item.isPresent()) {
-            return ResponseEntity.ok(item.get().getMessage());
+            return ResponseEntity.ok(item.get().getMessages());
         } else {
             return ResponseEntity.notFound().build();
         }
