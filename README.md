@@ -36,3 +36,47 @@ A program az alábbi funkciókat valósítja meg:
 - új közreműködőket adhat hozzá a listához felhasználónév megadásával
 - eltávolíthat tagokat a közreműködők közül
 - törölheti a listát
+
+## Backend megvalósítása
+
+### Fejlesztői környezet
+
+#### Felhasznált eszközök
+
+* [Java](https://www.java.com/) [Spring Boot](https://projects.spring.io/spring-boot/) technológia használata
+* [H2](http://www.h2database.com/) adatbázis használata
+* [MAVEN](https://maven.apache.org/) a projekt menedzseléséhez és a build folyamat automatizálásához
+* [Github](https://github.com/) a projekt közzétételéhez
+
+### Adatbázis-terv
+
+![Adatbázis-terv modellje](db_uml.png)
+
+### Könyvtárstruktúra
+
+- main
+    - java
+        - hu
+            - elte
+                - shoppinglist
+                    - `ShoppinglistApplication.java`
+                    - controllers
+                        - `ItemController.java`
+                        - `MessageController.java`
+                        - `ShoppingListController.java`
+                        - `UserController.java`
+                    - entities
+                        - `Item.java`
+                        - `Message.java`
+                        - `Shopping.java`
+                        - `User.java`
+                    - repositories
+                        - `ItemRepository.java`
+                        - `MessageRepository.java`
+                        - `ShoppingRepository.java`
+                        - `UserRepository.java`
+                    - security
+                        - `WebSecurityConfig.java`
+    - resources
+        - `data.sql`
+        - `application.properties`
