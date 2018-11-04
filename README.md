@@ -80,3 +80,38 @@ A program az alábbi funkciókat valósítja meg:
     - resources
         - `data.sql`
         - `application.properties`
+
+### Végpontok
+
+#### shoppinglist
+
+- `GET /shoppinglist/` : Az összes bevásárlólista lekérdezése
+- `GET /shoppinglist/{id}` : Egy bevásárlólista lekérdezése
+- `GET /shoppinglist/{id}/item` : Egy bevásárlólista elemeinek lekérdezése
+- `POST /shoppinglist/` : Bevásárlólista létrehozása
+- `POST /shoppinglist/{id}/item` : Bevásárlólistához elem hozzáadása
+- `PUT /shoppinglist/{id}` : Bevásárlólista módosítása
+- `DELETE /shoppinglist/{id}` : Bevásárlólista törlése
+
+#### message
+
+- `GET /message/` : Az összes komment lekérdezése
+- `GET /message/{id}` : Egy komment lekérdezése
+- `POST /message/` : Komment létrehozása
+- `PUT /message/{id}` : Komment módosítása
+- `DELETE /message/{id}` : Komment törlése
+
+#### item
+
+- `GET /item/` : Az összes termék lekérdezése
+- `GET /item/{id}` : Egy termék lekérdezése
+- `GET /item/{id}/message` : Egy termék kommentjeinek lekérdezése
+- `POST /item/` : Termék létrehozása
+- `POST /item/{id}/message` : Termékhez komment hozzáadása
+- `PUT /item/{id}` : Termék módosítása
+- `DELETE /item/{id}` : Termék törlése
+
+#### user
+
+- `POST /user/register` : Felhasználó hozzáadása
+- `POST /user/login` : Bejelentkezés
