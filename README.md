@@ -41,12 +41,21 @@ A program az alábbi funkciókat valósítja meg:
 
 ### Fejlesztői környezet
 
-#### Felhasznált eszközök
+#### Szerver oldali eszközök
 
-* [Java](https://www.java.com/) [Spring Boot](https://projects.spring.io/spring-boot/) technológia használata
-* [H2](http://www.h2database.com/) adatbázis használata
-* [MAVEN](https://maven.apache.org/) a projekt menedzseléséhez és a build folyamat automatizálásához
+* [NetBeans](https://netbeans.org/) IDE 8.2 használata
+* [Java](https://www.java.com/) 1.8 [Spring Boot](https://projects.spring.io/spring-boot/) 2.0.5 technológia használata
+* [H2](http://www.h2database.com/) 1.4.197 adatbázis használata
+* [MAVEN](https://maven.apache.org/) 3.6.0 a projekt menedzseléséhez és a build folyamat automatizálásához
 * [Github](https://github.com/) a projekt közzétételéhez
+
+#### Kliens oldali eszközök
+
+* [Visual Studio Code](https://netbeans.org/) fejlesztőkörnyezet használata
+* [HTML5](https://htmlreference.io/) és [CSS3](https://cssreference.io/) a megjelenítéshez
+* [Angular](https://angular.io/) keretrendszer használata
+* [Node.js](https://nodejs.org/) 10.14.1, [NPM](https://www.npmjs.com/) 6.4.1 használata
+* [Mozilla Firefox](https://www.mozilla.org/hu/firefox/) 63.0.3, [Google Chrome](https://www.google.com/chrome/) 71.0.3578.80 webböngészők használata
 
 ### Adatbázis-terv
 
