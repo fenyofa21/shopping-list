@@ -129,3 +129,7 @@ A program az alábbi funkciókat valósítja meg:
 
 ![Használati eset diagram](usecase.png)
 
+### Folyamat leírása
+
+Az alábbi ábrán egy új termék felvételének a folyamatát láthatjuk:
+![Folyamat](activity.png)
