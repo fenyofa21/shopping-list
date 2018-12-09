@@ -37,7 +37,7 @@ A program az alábbi funkciókat valósítja meg:
 - eltávolíthat tagokat a közreműködők közül
 - törölheti a listát
 
-## Backend megvalósítása
+## Tervezés
 
 ### Fejlesztői környezet
 
@@ -115,3 +115,8 @@ A program az alábbi funkciókat valósítja meg:
 
 - `POST /user/register` : Felhasználó hozzáadása
 - `POST /user/login` : Bejelentkezés
+
+### Használati eset diagram
+
+![Használati eset diagram](usecase.png)
+
