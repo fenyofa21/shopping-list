@@ -133,3 +133,26 @@ A program az alábbi funkciókat valósítja meg:
 
 Az alábbi ábrán egy új termék felvételének a folyamatát láthatjuk:
 ![Folyamat](activity.png)
+
+##Felhasználói dokumentáció
+
+###Rendszerkövetelmények
+
+Az alkalmazásnak nincsenek különleges hardverkövetelményei, valamint bármilyen operációs rendszeren futtatható.
+Szükséges szoftverek: [Node.js](https://nodejs.org/en/download/), [Angular](https://angular.io/), bármilyen webböngésző
+
+###Telepítés
+
+- Töltsük le a githubról a forráskódot és csomagoljuk ki egy tetszőleges mappába
+- A forráskönyvtárban adjuk ki az `npm i`, majd az `ng serve` parancsot
+- Ezután egy általunk választott böngészőben nyissuk meg a [http://localhost:4200](http://localhost:4200) címet
+
+###Használat
+
+- Bejelentkezés: ha még nem regisztrált, akkor a regisztráció gombra kattintva felhasználónév és jelszó megadásával lehet ezt megtenni. Sikeres regisztráció után a megadott felhasználónév-jelszó pár megadásával lehet belépni a rendszerbe.
+
+- Kezdőoldal: itt láthatóak azon listák, amelyekben a felhasználó közreműködőként részt vesz. Lehetőség van új listát létrehozni, illetve szerkeszteni egy meglévőt.
+
+- Lista: egy listát kiválasztva megjelennek a benne lévő termékek. Lehetőség van új terméket hozzáadni a listához, ehhez meg kell adni a nevet, a mennyiséget, a mértékegységet. Egy terméknek meg lehet változtatni az állapotát, ezek a szükséges és a megvásárolt állapotok lehetnek. Emellett lehetőség van megjegyzést fűzni egy termékhez, illetve törölni egy terméket.
+
+- Listaadminisztrátor: ha valaki egy új listát hozott létre, az automatikusan listaadminisztrátorrá válik. Ilyenkor lehetősége van közreműködőket hozzáadni a listához felhasználónév alapján, illetve törölni őket a listáról, valamint magát a listát is lehet törölni.
