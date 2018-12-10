@@ -134,20 +134,20 @@ A program az alábbi funkciókat valósítja meg:
 Az alábbi ábrán egy új termék felvételének a folyamatát láthatjuk:
 ![Folyamat](activity.png)
 
-##Felhasználói dokumentáció
+## Felhasználói dokumentáció
 
-###Rendszerkövetelmények
+### Rendszerkövetelmények
 
 Az alkalmazásnak nincsenek különleges hardverkövetelményei, valamint bármilyen operációs rendszeren futtatható.
 Szükséges szoftverek: [Node.js](https://nodejs.org/en/download/), [Angular](https://angular.io/), bármilyen webböngésző
 
-###Telepítés
+### Telepítés
 
 - Töltsük le a githubról a forráskódot és csomagoljuk ki egy tetszőleges mappába
 - A forráskönyvtárban adjuk ki az `npm i`, majd az `ng serve` parancsot
 - Ezután egy általunk választott böngészőben nyissuk meg a [http://localhost:4200](http://localhost:4200) címet
 
-###Használat
+### Használat
 
 - Bejelentkezés: ha még nem regisztrált, akkor a regisztráció gombra kattintva felhasználónév és jelszó megadásával lehet ezt megtenni. Sikeres regisztráció után a megadott felhasználónév-jelszó pár megadásával lehet belépni a rendszerbe.
 
